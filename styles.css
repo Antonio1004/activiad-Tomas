@@ -1,0 +1,90 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "featured-header featured-header"
+        "main profile"
+        "footer footer";
+    grid-template-columns: 2fr 1fr; /* MAIN más ancho que PROFILE */
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px; /* Espaciado entre las áreas */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-area: header;
+    background-color: green;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.featured-header {
+    grid-area: featured-header;
+    background-color: purple;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.main {
+    grid-area: main;
+    background-color: orange;
+    padding: 20px;
+    margin-left: 50px; /* Márgen aumentado a la izquierda */
+    color: black;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.profile {
+    grid-area: profile;
+    background-color: blue;
+    padding: 20px;
+    margin-right: 50px; /* Márgen aumentado a la derecha */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Diseño responsive para móviles */
+@media (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "featured-header"
+            "main"
+            "profile"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        margin-left: 0; /* Eliminar márgenes en pantallas pequeñas */
+    }
+
+    .profile {
+        margin-right: 0; /* Eliminar márgenes en pantallas pequeñas */
+    }
+}
+body{
+    background-color: red;
+}
